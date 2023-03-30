@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>book List</title>
+</head>
+<body>
+    <h1>Listado de Libros</h1>
+    <table>
+        <tr>
+            <th scope="coll">Libro</th>
+            <th scope="coll">Author</th>
+            <th scope="coll">Año</th>
+            <th scope="coll">Ver</th>
+        </tr>
+
+        {% for book in books %}
+            <tr>
+                <td>{{ book.0 }}</td>
+                <td>{{ book.1 }}</td>
+                <td>{{ book.2 }}</td>
+                <td><a href='{{book.3 }}'>Ver..</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

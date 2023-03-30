@@ -1,0 +1,12 @@
+<html>
+    <body>
+        <h1>Librerias Asociadas</h1>
+        <ul>
+            {% for bookshop in bookshop_list %}
+            <li>{{ bookshop.name }} - {{ bookshop.address }}</li>
+            {% empty %}
+            <li>No hay Librerias.</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
