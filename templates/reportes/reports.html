@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes</title>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        <h1>SOLICITUD DE REPORTES</h1>
+        <h3>Tipo de reporte</h3>
+        <br>
+        <select name="type_report">
+            <option value="SALES REPORT" selected>Reporte de ventas por Libreria</option>
+            <option value="TOP_SELLING_BOOKS">Top de libros vendidos</option>
+        </select>
+        <h3>Tipo de Test</h3>
+        <br>
+        <select name="type_test">
+            <option value="1" selected>Sincronico</option>
+            <option value="2" >Asincronico</option>
+        </select>
+
+        <br>
+        <br>
+        <button class="button enable" type="submit">
+            Solicitar Reporte
+        </button>
+    </form>
+</body>
+</html>

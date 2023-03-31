@@ -19,8 +19,7 @@ def Search(request):
             libros = contenido["items"]
             code = json.dumps(libros)
             listBooks = json.loads(code)
-            data = []
-            print(listBooks)
+            data = []           
             for books in listBooks:
                 data.append([
                     books['volumeInfo']['title'],
